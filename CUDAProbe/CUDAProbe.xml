@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<executable>
+  <category>Utilities</category>
+  <title>CUDA Probe</title>
+  <description><![CDATA[This CLI module probes the computer for CUDA capability]]></description>
+  <version>0.0.1</version>
+  <documentation-url>http://www.example.com/Slicer/Modules/CUDAProbe</documentation-url>
+  <license>Slicer</license>
+  <contributor>Gregory Sharp (MGH)</contributor>
+  <acknowledgements>This work was partially funded by NXNNXX</acknowledgements>
+  <parameters>
+    <label>CUDA Probe Results</label>
+    <description><![CDATA[Output parameters]]></description>
+    <string>
+      <name>CUDAProbeResults</name>
+      <label>*</label>
+      <channel>output</channel>
+      <description><![CDATA[CUDA Probe Results]]></description>
+    </string>
+  </parameters>
+</executable>
