@@ -1,0 +1,6 @@
+#ifndef __CUDAProbe_h__
+#define __CUDAProbe_h__
+
+#cmakedefine CUDA_FOUND 1
+
+#endif

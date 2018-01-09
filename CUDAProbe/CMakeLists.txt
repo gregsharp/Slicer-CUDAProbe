@@ -3,33 +3,33 @@
 set(MODULE_NAME CUDAProbe)
 
 #-----------------------------------------------------------------------------
-
-#
 # SlicerExecutionModel
-#
 find_package(SlicerExecutionModel REQUIRED)
 include(${SlicerExecutionModel_USE_FILE})
 
-#
-# ITK
-#
-set(${PROJECT_NAME}_ITK_COMPONENTS
-  ITKIOImageBase
-  ITKSmoothing
-  )
-find_package(ITK 4.6 COMPONENTS ${${PROJECT_NAME}_ITK_COMPONENTS} REQUIRED)
-set(ITK_NO_IO_FACTORY_REGISTER_MANAGER 1) # See Libs/ITKFactoryRegistration/CMakeLists.txt
-include(${ITK_USE_FILE})
+# CUDA
+set (CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake" ${CMAKE_MODULE_PATH})
+find_package (CUDA_wrap)
+set (CUDA_FOUND ${CUDA_FOUND} CACHE BOOL "Did we find cuda?")
+if (CUDA_FOUND)
+  cuda_include_directories (${CMAKE_CURRENT_SOURCE_DIR})
+endif ()
+
+# Config file
+configure_file (
+  ${CMAKE_CURRENT_SOURCE_DIR}/CUDAProbe.h.in
+  ${CMAKE_CURRENT_BINARY_DIR}/CUDAProbe.h
+  @ONLY)
 
 #-----------------------------------------------------------------------------
 set(MODULE_INCLUDE_DIRECTORIES
+  ${CMAKE_CURRENT_BINARY_DIR}
   )
 
 set(MODULE_SRCS
   )
 
 set(MODULE_TARGET_LIBRARIES
-  ${ITK_LIBRARIES}
   )
 
 #-----------------------------------------------------------------------------
