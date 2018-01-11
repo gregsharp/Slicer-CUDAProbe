@@ -12,7 +12,25 @@
     <label>CUDA Probe Results</label>
     <description><![CDATA[Output parameters]]></description>
     <string>
-      <name>CUDAProbeResults</name>
+      <name>CUDAProbeResults1</name>
+      <label>*</label>
+      <channel>output</channel>
+      <description><![CDATA[CUDA Probe Results]]></description>
+    </string>
+    <string>
+      <name>CUDAProbeResults2</name>
+      <label>*</label>
+      <channel>output</channel>
+      <description><![CDATA[CUDA Probe Results]]></description>
+    </string>
+    <string>
+      <name>CUDAProbeResults3</name>
+      <label>*</label>
+      <channel>output</channel>
+      <description><![CDATA[CUDA Probe Results]]></description>
+    </string>
+    <string>
+      <name>CUDAProbeResults4</name>
       <label>*</label>
       <channel>output</channel>
       <description><![CDATA[CUDA Probe Results]]></description>
