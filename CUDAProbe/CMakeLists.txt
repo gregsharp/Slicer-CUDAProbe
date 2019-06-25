@@ -31,6 +31,10 @@ set(MODULE_SRCS
 
 set(MODULE_TARGET_LIBRARIES
   )
+if (LIBDL_FOUND)
+  list (APPEND MODULE_TARGET_LIBRARIES dl)
+endif ()
+
 
 #-----------------------------------------------------------------------------
 SEMMacroBuildCLI(
