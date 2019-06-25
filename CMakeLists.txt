@@ -11,6 +11,7 @@ set(EXTENSION_DESCRIPTION "This extension queries your computer for its CUDA cap
 set(EXTENSION_ICONURL "https://raw.githubusercontent.com/gregsharp/Slicer-CUDAProbe/master/CUDAProbe.png")
 set(EXTENSION_SCREENSHOTURLS "https://raw.githubusercontent.com/gregsharp/Slicer-CUDAProbe/master/CUDAProbe-screenshot.png")
 set(EXTENSION_DEPENDS "NA") # Specified as a space separated string, a list or 'NA' if any
+set(EXTENSION_STATUS "Work in progress")
 
 #-----------------------------------------------------------------------------
 # Extension dependencies
